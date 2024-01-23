@@ -21,7 +21,7 @@ module.exports = { session: process.env.SESSION_ID || 'zokk',
     HEROKU_APY_KEY : process.env.HEROKU_APY_KEY ,
     WARN_COUNT : process.env.WARN_COUNT || '3' ,
     ETAT : process.env.PRESENCE || '',
-    GPT : process.env.OPENAI_API_KEY || '[REDACTED_OPENAI_API_KEY]',
+    //GPT : process.env.OPENAI_API_KEY || '[REDACTED_OPENAI_API_KEY]',
     DP : process.env.STARTING_BOT_MESSAGE,              
     DATABASE_URL,
     DATABASE: DATABASE_URL === databasePath
