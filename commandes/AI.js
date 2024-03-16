@@ -83,7 +83,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const question = arg.join(' ');
-      const response = await axios.get(`https://chat.openai.com/c/[REDACTED_TOKEN]?q=${question}`);
+      const response = await axios.get(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg=${question}`);
       
       const data = response.data;
       if (data) {
