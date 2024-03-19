@@ -85,7 +85,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       const question = arg.join(' ');
       const configuration = new Configuration({
 
-              apiKey: "put api key here",
+              apiKey: "[REDACTED_OPENAI_API_KEY]",
 
             });
 
@@ -114,6 +114,6 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
             
             }
       
-      repondre("Something went wrong")
+      repondre(error.response.status)
     }
   });
