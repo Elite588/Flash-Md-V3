@@ -83,7 +83,6 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const question = arg.join(' ');
-      const response = await openai.createChatCompletion({
       const configuration = new Configuration({
 
               apiKey: "[REDACTED_OPENAI_API_KEY]",
@@ -101,9 +100,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
           });
 
           repondre(`${response.data.choices[0].message.content}`);
-      } else {
-        repondre("Error during response generation.");
-      }
+     
     } catch (error) {
       console.error('Erreur:', error.message || 'Une erreur s\'est produite');
       repondre("Oops, an error occurred while processing your request.");
