@@ -21,6 +21,28 @@ france({ nomCom: "hacker",
         repondre("🥵🥵 " + e);
     }
 });
+france({ nomCom: "sand",
+    categorie: "Logo", reaction: "⌛" }, async (origineMessage, zk, commandeOptions) => {
+    const { prefixe, arg, ms, repondre } = commandeOptions;
+    if (!arg || arg == "") {
+        repondre("*Example Usage : * " + prefixe + "sand Flash-Md");
+        return;
+    }
+    try {
+        let radio = "[REDACTED_TOKEN]";
+        let anu = await mumaker.ephoto("https://en.ephoto360.com/write-names-and-messages-on-the-sand-online-582.html", arg); //
+        //
+       // let res = Object.values(anu)[3];
+        // console.log("&€"+res);
+      //  let lien = "https://e1.yotools.net" + res;
+        repondre("*Flash-Md is Processing...*");
+        await zk.sendMessage(origineMessage, { image: { url:anu.image}, caption: "\t *Logo By FLASH-MD*" }, { quoted: ms });
+    }
+    catch (e) {
+        repondre("🚫🚫 " + e);
+    }
+});
+
 france({ nomCom: "dragonball", categorie: "Logo", reaction: "🐉" }, async (dest, zk, commandeOptions) => {
     let { arg, repondre, prefixe, ms } = commandeOptions;
     try {
