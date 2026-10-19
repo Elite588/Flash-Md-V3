@@ -27,7 +27,7 @@
 #### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/franceking1/FLASH-MD-V3.git
+git clone https://github.com/Elite588/Flash-Md-V3.git
 ```
 ```bash
 cd FLASH-MD-V3
